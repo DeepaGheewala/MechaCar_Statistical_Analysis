@@ -52,8 +52,63 @@ The [MechaCar Suspension_Coil.csv](#Suspension_Coil.csv) dataset contains the re
     - However, Lot 3 has variance way above 100 ie. it has 170.29. Hence it doesn't meet the design Specifications for the MechaCar suspension Coils.
 
 ## 3- T-Tests on Suspension Coils
+Determine if there is any statistical difference in mean for different population and different Manufacturing Lots 
 
+**Null Hypothesis (H0):** 
+    1) All manufacturing lots - The mean for sample is not statistically different from the population mean of 1,500 pounds per square inch.     
+    2) Each lot individually - The mean for Lot is not statistically different from the population mean of 1,500 pounds per square inch.    
+**Alternate Hypothesis (H1)** All the individual lot are statistically different from the population mean of 1500 per square inch.
 
-**Null Hypothesis (H0):** All manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
-**Alternate Hypothesis (H1)** Not all the individual lot are statistically different from the population mean of 1500 per square inch.
+### Various t-Test Results:
+
+**Hypothesis 1 - For Total Data **
+- T-Test run as below
+```R
+#Delivery 3:T-Test on Suspension Coils
+# 1. Use the t.test() function to determine if the PSI across all manufacturing lots is statistically
+# different from the population mean of 1,500 pounds per square inch.
+t.test(suspensionCoil_table$PSI,mu=1500)
+```
+**Result**  
+* The **t-value** is **-1.8931** which falls within the range of -2 to +2   
+* The **p-value** is **0.06** which is not <0.05
+* Mean = 1498.78
+    Hence the null hypothesis fails to be rejected. Therefore, All manufacturing lots are statistically not different from the population mean of 1,500 pounds per square inch. 
+<p align="center"> <img src="images/images/D3_All_data_t-test.jpg"  align="center" height="200" width="600"></p>
+
+**Hypothesis 2 - For Different Manufacturing Lot**
+- T-Test run for Lot 1, Lot2, Lot 3 and respective results
+```R
+#For Lot 1
+t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
+```
+**Result**  
+* The **t-value** is **0** which falls within the range of -2 to +2   
+* The **p-value** is **1** which is not < 0.05
+* Mean = 1500
+    Hence the null hypothesis fails to be rejected. Therefore, Lot1 is statistically not different from the population mean of 1,500 pounds per square inch. 
+<p align="center"> <img src="images/images/D3_Lot1_t-test.jpg"  align="center" height="200" width="600"></p>
+
+```R
+#Lot2
+t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot2")$PSI,mu = 1500) 
+```
+**Result**  
+* The **t-value** is **0.51745** which falls within the range of -2 to +2   
+* The **p-value** is **0.61** which is not <0.05
+* Mean = 1500.2
+    Hence the null hypothesis fails to be rejected. Therefore, Lot2 are not statistically different from the population mean of 1,500 pounds per square inch. 
+<p align="center"> <img src="images/images/D3_Lot2_t-test.jpg"  align="center" height="200" width="600"></p>
+
+```R
+#Lot3 
+t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot3")$PSI,mu = 1500)
+```
+**Result**  
+* The **t-value** is **-2.0916** which does not falls within the range of -2 to +2   
+* The **p-value** is **0.04168** which is **< 0.05**
+* Mean = 1496.14
+    Hence the null hypothesis can be rejected. Therefore, we can say Lot3 are statistically different from the population mean of 1,500 pounds per square inch. 
+<p align="center"> <img src="images/images/D3_Lot3_t-test.jpg"  align="center" height="200" width="600"></p>
+
 
