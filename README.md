@@ -1,4 +1,4 @@
-# MechaCar_Statistical_Analysis
+#  <span style="color: Lightgreen"> MechaCar_Statistical_Analysis </span>
 Jeremy is approached by upper management about a special project. AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management has called on Jeremy and the data analytics team to review the production data for insights that may help the manufacturing team.
 the data analytics team do the following:
 
@@ -121,3 +121,4 @@ c) Mean = 1496.14
 
 
 ## 4 Study Design- MechaCar vs Competition
+
