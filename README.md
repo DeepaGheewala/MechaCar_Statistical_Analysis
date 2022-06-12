@@ -120,4 +120,4 @@ c) Mean = 1496.14
 <p align="center"> <img src="images/D3_Lot3_t-test.jpg"  align="center" height="200" width="600"></p>
 
 
-## 4 Study Design: MechaCar vs Competition
+## 4 Study Design- MechaCar vs Competition
