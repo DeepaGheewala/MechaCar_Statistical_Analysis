@@ -78,12 +78,12 @@ t.test(suspensionCoil_table$PSI,mu=1500)
 
 #### ```Hypothesis 2 - For Different Manufacturing Lot```
 - T-Test run for Lot 1, Lot2, Lot 3 and respective results
-1) **Lot 1** 
+##### 1) **Lot 1** 
 ```R
 #For Lot 1
 t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
 ```
-##### **Result**  
+###### **Result**  
 a) The **t-value** is **0** which falls within the range of -2 to +2   
 b) The **p-value** is **1** which is not < 0.05  
 c) Mean = 1500  
@@ -92,12 +92,12 @@ c) Mean = 1500
 <p align="center"> <img src="images/images/D3_Lot1_t-test.jpg"  align="center" height="200" width="600"></p>
 
 
-2) **Lot 2** 
+##### 2) **Lot 2** 
 ```R
 #Lot2
 t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot2")$PSI,mu = 1500) 
 ```
-##### **Result**  
+###### **Result**  
 a) The **t-value** is **0.51745** which falls within the range of -2 to +2   
 b) The **p-value** is **0.61** which is not <0.05  
 c) Mean = 1500.2
@@ -105,13 +105,13 @@ c) Mean = 1500.2
    
 <p align="center"> <img src="images/images/D3_Lot2_t-test.jpg"  align="center" height="200" width="600"></p>
 
-3) **Lot 3** 
+##### 3) **Lot 3** 
 
 ```R
 #Lot3 
 t.test(subset(suspensionCoil_table,Manufacturing_Lot=="Lot3")$PSI,mu = 1500)
 ```
-##### **Result**  
+###### **Result**  
 a) The **t-value** is **-2.0916** which does not falls within the range of -2 to +2   
 b) The **p-value** is **0.04168** which is **< 0.05**  
 c) Mean = 1496.14
