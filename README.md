@@ -130,8 +130,8 @@ Using knowledge of R, we have to design a statistical study to compare performan
 
 ### What is the null hypothesis or alternative hypothesis?
 
-**Null Hypothesis H0 :** Efficiency of the car is more if Car safety ratings are more. 
-**Null Hypothesis H1 :** There is no correlation between Highway Fuel Efficiency and Safety ratings.
+**Null Hypothesis H0 :** Efficiency of the car is more if Car safety ratings are more.   
+**Alternate Hypothesis H1 :** There is no correlation between Highway Fuel Efficiency and Safety ratings.
 
 ### What statistical test would you use to test the hypothesis? And why?
 In order to find the correlation between Car Safter ratings and Highway Fuel Efficiency we can use chi-square test to find the correlation between two categorial variables.
